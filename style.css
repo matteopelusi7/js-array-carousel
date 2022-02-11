@@ -32,6 +32,7 @@ section {
     top: 0;
     right: 0;
     bottom: 0;
+    background-color: black;
 }
 
 .img-slide .item-slide {
@@ -41,6 +42,7 @@ section {
 .img-slide img {
     height: 100%;
     width: 100%;
+    opacity: 0.6;
 }
 
 .slide-text {
@@ -57,7 +59,22 @@ section {
 
 .title-slider {
     padding-right: 15px;
+    display: none;
 }
+
+.title-slider.active {
+    display: block;
+}
+
+.description-slide {
+    display: none;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+.description-slide.active {
+    display: block;
+} 
 
 .button {
     display: flex;
@@ -67,6 +84,7 @@ section {
     top: 10px;
     bottom: 12px;
     right: 40%;
+    z-index: 10;
 }
 
 .button i {
@@ -74,6 +92,7 @@ section {
     background-color: #ddd;
     border-radius: 99px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .slide-wrapper .item.active {
@@ -82,4 +101,12 @@ section {
 
 .slide-wrapper .item {
     display: none;
+}
+
+.item-slide.active {
+    border: 3px solid white;
+}
+
+.item-slide.active img {
+    opacity: 1;
 }
